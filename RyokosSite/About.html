@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Ryokos</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+
+  		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	</head>
+
+	<body>
+		<nav class="mainNav" id="responsiveNav">
+			<a href="Index.html">Home</a>
+			<a href="About.html">About Us</a>
+			<a href="Visit.html">Visit</a>
+			<a href="Contact.html">Contact</a>
+			
+			<a href="javascript: void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</nav>
+		
+	<main>
+			<div id="feature">
+				<img src="images/logo.png" class="logo">
+			</div>
+
+
+			<article class="column">
+					<h1>About Us</h1>
+
+					<h3>Your Neighborhood Staple</h3>
+				
+					<p>Ryoko's is a neighborhood staple that's been serving fresh and authentic Japanese cuisine for decades in an atmosphere that'll transport you to Tokyo.
+
+					Take a walk around the heart of downtown San Francisco and you’ll come across Ryoko’s Japanese Restaurant and Bar -- a neighborhood staple that’s been around for 30 years. Walk down the stairs, and you’ve entered our high energy, underground restaurant. You’ll immediately be greeted by our team as we transport you to Tokyo in a restaurant steeped in Japanese decor and culture. Our food is authentic as can be, with things like our own distinctive style of miso soup and rice that's cooked with vinegar we make in-house. Our seafood is delivered fresh every single day for a distinctive, delectable flavor that’ll keep you returning time and time again.</p>
+
+					<h1>Gallery</h1>
+			</article>	
+
+	</main>
+
+	<div class="w3-content w3-display-container">
+  		<img class="mySlides" src="images/About1.jpg">
+  		<img class="mySlides" src="images/About2.jpg">
+  		<img class="mySlides" src="images/About3.jpg">
+  		<img class="mySlides" src="images/About4.jpg">
+  		<img class="mySlides" src="images/About5.jpg">
+
+  		<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  		<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+	</div>
+
+
+<script>
+
+function myFunction () {
+	var x = document.getElementById("responsiveNav");
+
+	if (x.className === "mainNav") {
+		x.className += " responsive";
+	} else {
+		x.className = "mainNav";
+	}
+	}
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n)
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+    if (n > x.length){slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+}
+
+</script>
+
+</body>
+
+
+<html>

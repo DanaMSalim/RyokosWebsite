@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Ryokos</title>
+
+
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	</head>
+
+	<body>
+		<nav class="mainNav" id="responsiveNav">
+			<a href="Index.html">Home</a>
+			<a href="About.html">About Us</a>
+			<a href="Visit.html">Visit</a>
+			<a href="Contact.html">Contact</a>
+			
+			<a href="javascript: void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</nav>
+		
+
+
+
+
+	<div id="parallax-container" class="fullBG">
+		  <div style="background: url(images/ryokosBGtransparent.png); background-size: cover; background background-repeat: no-repeat;"></div>
+		  <div style="background: url(images/bigwave.png); background-repeat: no-repeat"></div>
+		  <div style="background: url(images/ryokoslogo.png);background-repeat: no-repeat"></div>
+		  <div style="background: url(images/smallwave.png);"></div>
+		  <div style="background: url(images/foregroundwave.png)"></div>
+		  <div style="background: url(images/foregroundWhite.png)"></div>
+	</div>
+
+<div id="content">
+
+	<main>
+
+
+		<div id="feature">
+			<img src="images/logo.png" class="logo">
+
+		</div>
+
+		<article class="column">
+			<h3>Testimonials</h3>
+
+			<div style="padding-top: 0px;" class="w3-content w3-display-container">
+  				<img class="mySlides" src="images/Testimonials.jpg">
+  				<img class="mySlides" src="images/Testimonials2.jpg">
+  				<img class="mySlides" src="images/Testimonials3.jpg">
+  				<img class="mySlides" src="images/Testimonials4.jpg">
+  				<img class="mySlides" src="images/Testimonials5.jpg">
+
+  				<button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  				<button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+			</div>
+
+		</article>
+
+
+		<article class="column">
+			<h2>Gallery</h2>
+		</article>
+
+			<article class="column1">
+			</article>
+
+			<article class="column2">
+			</article>
+
+			<article class="column3">
+			</article>
+
+			<article class="column4">
+			</article>
+
+			<article class="column5">
+			</article>
+
+			<article class="column6">
+			</article>
+
+			<article class="column7">
+			</article>
+
+			<article class="column8">
+			</article>
+
+			<article class="column9">
+			</article>
+
+		</main>
+</div>
+
+
+
+<script>
+
+
+
+window.addEventListener(
+  "scroll",
+  () => {
+    let parent = document.getElementById("parallax-container");
+    let children = parent.getElementsByTagName("div");
+    for (let i = 0; i < children.length; i++) {
+      children[i].style.transform =
+        "translateY(-" + window.pageYOffset * i / children.length + "px)";
+    }
+  },
+  false
+);
+
+
+
+	function myFunction () {
+	var x = document.getElementById("responsiveNav");
+
+	if (x.className === "mainNav") {
+		x.className += " responsive";
+	} else {
+		x.className = "mainNav";
+	}
+	}
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n)
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+    if (n > x.length){slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+}
+
+</script>
+
+	</body>
+
+<html>

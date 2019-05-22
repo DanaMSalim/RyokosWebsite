@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Ryokos</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+
+  		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	</head>
+
+	<body>
+		<nav class="mainNav" id="responsiveNav">
+			<a href="Index.html">Home</a>
+			<a href="About.html">About Us</a>
+			<a href="Visit.html">Visit</a>
+			<a href="Contact.html">Contact</a>
+			
+
+			<a href="javascript: void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</nav>
+		
+	<main>
+			<div id="feature">
+				<img src="images/logo.png" class="logo">
+			</div>
+
+
+		<article class="column">
+			<h1>Questions? Contact Us!</h1>
+			<h2>Phone:(415) 775-1028</h2> 
+			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLScjDvgR0U0QeVnoAwRnFVD8_CD8QQpvaqLS3k56FTTRZ_hTcA/viewform?embedded=true" width="640" height="1425" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+		</article>
+
+</main>
+
+
+<script>
+
+function myFunction () {
+	var x = document.getElementById("responsiveNav");
+
+	if (x.className === "mainNav") {
+		x.className += " responsive";
+	} else {
+		x.className = "mainNav";
+	}
+	}
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n)
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+    if (n > x.length){slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+}
+
+</script>
+
+</body>
+
+
+<html>

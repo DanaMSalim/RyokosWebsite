@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Ryokos</title>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<link rel="stylesheet" type="text/css" href="css/stylesheet.css"/>
+
+  		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+	</head>
+
+	<body>
+		<nav class="mainNav" id="responsiveNav">
+			<a href="Index.html">Home</a>
+			<a href="About.html">About Us</a>
+			<a href="Visit.html">Visit</a>
+			<a href="Contact.html">Contact</a>
+			
+
+			<a href="javascript: void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+		</nav>
+		
+	<main>
+			<div id="feature">
+				<img src="images/logo.png" class="logo">
+			</div>
+
+
+		<article class="column">
+			<h1>Visit Us</h1>
+
+			<h4>Address</h4>
+			<p>619 Taylor St, San Francisco, CA 94102</p>
+
+			<h4>Hours</h4>
+			<p>6:00 - 2:00 Daily</p>
+
+
+		<div class="maps">
+				<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.078033741081!2d-122.41418628468195!3d37.788210979757!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808e0fbbe951%3A0x2a0d6d496a174461!2sRyoko&#39;s+Japanese+Restaurant+%26+Bar!5e0!3m2!1sen!2sus!4v1558207842653!5m2!1sen!2sus" width="800" height="400" frameborder="0" align="middle" style="border:0" allowfullscreen></iframe>
+		</div>
+
+		</article>
+
+</main>
+
+
+<script>
+
+function myFunction () {
+	var x = document.getElementById("responsiveNav");
+
+	if (x.className === "mainNav") {
+		x.className += " responsive";
+	} else {
+		x.className = "mainNav";
+	}
+	}
+
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n)
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+    if (n > x.length){slideIndex = 1}
+      if (n < 1) {slideIndex = x.length}
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+      }
+      x[slideIndex-1].style.display = "block";
+}
+
+</script>
+
+</body>
+
+
+<html>
